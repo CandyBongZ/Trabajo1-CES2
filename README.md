@@ -66,4 +66,4 @@ El proyecto está organizado en las siguientes capas:
 ## Ejecución del Proyecto
 1. Clona este repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone <https://github.com/CandyBongZ/Trabajo1-CES2.git>
