@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,7 +27,7 @@ public class MedicoControlador {
 
     @GetMapping("/peticion2")
     public String peticion2(Model model) {
-        var stats = Medicos.lista.stream()
+        IntSummaryStatistics stats = Medicos.lista.stream()
                 .collect(Collectors.summarizingInt(m -> m.getPacientes().size()));
 
         model.addAttribute("conteo", stats.getCount());
@@ -41,11 +42,11 @@ public class MedicoControlador {
     @GetMapping("/peticion3")
     public String peticion3(Model model) {
 
-        var pacientes = Medicos.lista.stream()
+        List<Paciente> pacientes = Medicos.lista.stream()
                 .flatMap(medico -> medico.getPacientes().stream())
                 .toList();
 
-        var diagnosticos = pacientes.stream()
+        List<String> diagnosticos = pacientes.stream()
                 .map(p -> p.getDiagnostico())
                 .toList();
 
