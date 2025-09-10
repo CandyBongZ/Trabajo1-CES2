@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Petición 3 - Pacientes y Diagnósticos</title>
+</head>
+<body>
+<h1>Petición 3</h1>
+
+<h2>Todos los pacientes de todos los médicos:</h2>
+<ul>
+  <li th:each="paciente : ${pacientes}" th:text="${paciente}"></li>
+</ul>
+
+<h2>Diagnósticos de todos los pacientes:</h2>
+<ul>
+  <li th:each="diag : ${diagnosticos}" th:text="${diag}"></li>
+</ul>
+
+</body>
+</html>

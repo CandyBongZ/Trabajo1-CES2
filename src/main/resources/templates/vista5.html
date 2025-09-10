@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Petición 5 - Paciente de mayor edad</title>
+</head>
+<body>
+<h1>Petición 5</h1>
+
+<h2>Todos los pacientes:</h2>
+<ul>
+  <li th:each="p : ${pacientes}" th:text="${p}"></li>
+</ul>
+
+<h2>Paciente de mayor edad:</h2>
+<p th:text="${pacienteMayor}"></p>
+</body>
+</html>

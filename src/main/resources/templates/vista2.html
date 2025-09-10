@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 2 - Estadísticas Médicos</title>
+</head>
+<body>
+<h1>Petición 2</h1>
+<p><strong>Estadísticas sobre el número de pacientes por médico:</strong></p>
+<ul>
+    <li>Total de médicos: <span th:text="${conteo}"></span></li>
+    <li>Total de pacientes (sumatoria): <span th:text="${suma}"></span></li>
+    <li>Promedio de pacientes por médico: <span th:text="${promedio}"></span></li>
+    <li>Mínimo de pacientes (médico con menos pacientes): <span th:text="${min}"></span></li>
+    <li>Máximo de pacientes (médico con más pacientes): <span th:text="${max}"></span></li>
+</ul>
+</body>
+</html>

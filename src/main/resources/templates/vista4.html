@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 4 - Consultas Médicos</title>
+</head>
+<body>
+<h1>Petición 4</h1>
+<ul>
+    <li>¿Hay médicos sin pacientes? = <span th:text="${sinPacientes}"></span></li>
+    <li>¿Hay médicos con más de 1 paciente? = <span th:text="${masDeDos}"></span></li>
+    <li>¿Ningún médico tiene 5 o más pacientes? = <span th:text="${ningunoConCincoOMas}"></span></li>
+</ul>
+</body>
+</html>
